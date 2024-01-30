@@ -1,0 +1,165 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  opacity: 1;
+}
+
+.center{
+  border: 2px solid black;
+  width: 859px;
+  height: 567px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hide{
+  overflow: hidden;
+  width: 759px;
+  height: 467px;
+  border: 2px solid black;
+  animation: shake 1.5s ease-in-out infinite; 
+}
+
+.clouds{
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 110px;
+}
+
+img:first-of-type{
+  width: 162px;
+  animation-duration: 13s;
+  animation-delay: 7s;
+}
+
+img{
+  width: 115px;
+  transform: translateX(780px);
+  animation: clouds infinite linear 22s;
+}
+
+img:last-of-type{
+  width: 83px;
+  animation-duration: 18s;
+  animation-delay: 7s;
+}
+
+@keyframes clouds {
+  from{
+    transform: translateX(780px);
+  }
+
+  to{
+    transform: translateX(-300px);
+  }
+}
+
+.square{
+  width: 88px;
+  height: 88px;
+  border: 2px solid black;
+  margin: 0 auto;
+  animation: rotate 1.5s ease-in infinite;
+}
+
+.ground{
+  border-top: 2px solid black;
+  width: 50%;
+  margin: 0 auto;
+}
+
+@keyframes rotate {
+  0%{
+    transform: translateY(0px) rotate(0deg);
+  }
+
+  50%{
+    transform: translateY(-19px) rotate(45deg);
+  }
+
+  100%{
+    transform: translateY(0px) rotate(90deg);
+  }
+}
+
+.wrapper{
+  overflow: hidden;
+  width: 50%;
+  height: 50%;
+  margin: 0 auto;
+}
+
+.moreTriangles{
+  margin: 0 auto;
+  animation: triangles 5s linear infinite;
+}
+
+.triangles{
+  margin-top: 10px;
+  position: relative;
+}
+
+.triangles:last-of-type{
+  margin-top: 10px;
+  margin-left: 100%;
+  position: relative;
+}
+
+.triangles div{
+  width: 0;
+  height: 0;
+  position: absolute;
+  border: 6px solid transparent;
+  border-top: 0;
+  border-bottom: 12px solid black;
+}
+
+.triangles div:nth-of-type(2){
+  top: 90px;
+  left: 68px;
+}
+
+.triangles div:nth-of-type(3){
+  top: 35px;
+  left: 136px;
+}
+
+.triangles div:nth-of-type(4){
+  top: 55px;
+  left: 204px;
+}
+
+.triangles div:last-of-type{
+  top: 28px;
+  left: 272px;
+}
+
+@keyframes triangles {
+    0%{
+      transform: translateX(0);
+    }
+
+    100%{
+      transform: translateX(-100%);
+    }
+}
+
+@keyframes shake{
+  0%{
+    transform: translateY(0);
+  }
+
+  100%{
+    transform: translateY(3px);
+  }
+}
+
